@@ -15,7 +15,7 @@
 					<th>id</th>
 					<th>名前</th>
 					<th>合計</th>
-					<th>履歴</th>
+					<th>最終履歴</th>
 					<th>#</th>
 				</tr>
 			</thead>
@@ -60,8 +60,8 @@
 					?>
 					<tr class="error">
 						<td><?php echo $row["id"] ?>
-						<td><i class="icon-user"></i><?php echo $row["name"] ?>
-						<td><?php echo $time_sum_h.'時'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?>
+						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
 						<td><?php echo $end ?> まで </td>
 						<td><a class="btn" href="./contact.php?name_id=<?php echo $row["id"]?>"><i class="icon-off"></i> 開始</a></td>
 					<?php
