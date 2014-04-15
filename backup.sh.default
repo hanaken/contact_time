@@ -1,0 +1,2 @@
+fileName=`date '+%Y%m'`'.txt';
+mysqldump --default-character-set=binary contacttime --host=localhost --user=kent --password=hk08336 > /var/www/html/contacttime/backup/$fileName
