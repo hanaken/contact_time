@@ -25,8 +25,7 @@
 						    die('データベース選択失敗です。'.mysql_error());
 						}
 						
-						//前に開始していない場合にエラーを出す
-						$result = mysql_query("select * from time where name_id = ".$_GET["name_id"]." order by id asc");
+						$result = mysql_query("select * from time where name_id = ".$_GET["name_id"]." order by start asc");
 						while($row = mysql_fetch_assoc($result)){?>
 						<tr>
 							<th><?php echo $row["start"]; ?></th>
