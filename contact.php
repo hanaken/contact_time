@@ -1,3 +1,19 @@
+<?php
+	$NAME_DEFAULT = array(
+		'Hanada' => '花田賢人',
+		'Maruyama' => '丸山拓',
+		'Miyazaki' => '宮崎晴夫',
+		'Ishida' => '石田翔悟',
+		'Inada' => '稲田詩央奈',
+		'Sato' => '佐藤義慈',
+		'Nakagawa' => '仲川浩樹',
+		'Kajiwara' => '梶原慎太郎',
+		'Harashita' => '原下聖貴',
+		'Kanemaru' => '金丸高大',
+		'Iijima' => '飯島洋一',
+		'Yoshii' => '吉井孝太郎',
+	);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -60,7 +76,7 @@
 					?>
 					<tr class="error">
 						<td><?php echo $row["id"] ?>
-						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $NAME_DEFAULT[$row["name"]] ?>
 						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
 						<td><?php echo $end ?> まで </td>
 						<td><a class="btn" href="./contact.php?name_id=<?php echo $row["id"]?>"><i class="icon-off"></i> 開始</a></td>
@@ -70,7 +86,7 @@
 					?>
 					<tr class="success">
 						<td><?php echo $row["id"] ?>
-						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $NAME_DEFAULT[$row["name"]] ?>
 						<td><?php echo $time_sum_h.'時'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
 						<td><?php echo $start?> から </td>
 						<td><a class="btn btn-danger" href="./contact.php?id=<?php echo $flag ?>"><i class="icon-ok icon-white"></i> 終了</a></td>
