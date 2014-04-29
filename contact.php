@@ -75,9 +75,9 @@
 						//来た時の表示
 					?>
 					<tr class="error">
-						<td><?php echo $row["id"] ?>
-						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $NAME_DEFAULT[$row["name"]] ?>
-						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
+						<td><?php echo $row["id"] ?></td>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $row["id"] ?>"><?php echo $NAME_DEFAULT[$row["name"]] ?></a></td>
+						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
 						<td><?php echo $end ?> まで </td>
 						<td><a class="btn" href="./contact.php?name_id=<?php echo $row["id"]?>"><i class="icon-off"></i> 開始</a></td>
 					<?php
