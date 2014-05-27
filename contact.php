@@ -28,7 +28,7 @@
 		<table class="table table-bordered table-hover">
 			<thead >
 				<tr>
-					<th>id</th>
+					<th>ランク</th>
 					<th>名前</th>
 					<th>合計</th>
 					<th>最終履歴</th>
