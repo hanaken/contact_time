@@ -43,11 +43,11 @@
 								$time_sum_m = (int)(($time - $time_sum_h*60*60) / 60);
 								$time_sum_s = ($time - $time_sum_h*60*60 - $time_sum_m*60);
 								?>
-								<tr>
-									<td><?php echo $start; ?></td>
-									<td><?php echo $end; ?></td>
-									<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
-								</tr>
+					<tr>
+						<td><?php echo $start; ?></td>
+						<td><?php echo $end; ?></td>
+						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
+					</tr>
 								<?php
 								$start = date('Y-m-d H:i:s' ,strtotime($row["start"]));
 								$end = $row["end"];
@@ -58,11 +58,11 @@
 						$time_sum_m = (int)(($time - $time_sum_h*60*60) / 60);
 						$time_sum_s = ($time - $time_sum_h*60*60 - $time_sum_m*60);						
 						?>
-						<tr>
-							<td><?php echo $start; ?></td>
-							<td><?php echo $end; ?></td>
-							<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
-						</tr>
+					<tr>
+						<td><?php echo $start; ?></td>
+						<td><?php echo $end; ?></td>
+						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
+					</tr>
 						<?php mysql_close($connect);
 					}
 				?>
