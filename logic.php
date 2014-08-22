@@ -80,8 +80,8 @@
 			$row = mysql_fetch_assoc($result);
 			$start = date('d', strtotime($row["start"]));
 			if ($now_day > $start){
-				$now = date('Y-m-d',strtotime($now.'-1 day'));
-				$now = $now.' 23:59:59';
+				$now = date('Y-m',strtotime($now));
+				$now = $now.'-'.$start.' 23:59:59';
 			}
 			$result = mysql_query("update time set end = '".$now."' where id = ".$id);
 			if (!$result) {
