@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<table class="table table-bordered table-hover">
+			<table class="table table-bordered table-hover table-striped">
 				<thead >
 					<tr>
 						<th>開始</th>
