@@ -1,7 +1,8 @@
 <?php
 	function connectDB(){
-		try {
-			$connect = mysql_connect('localhost','root','hk08336');
+        require("setting.php");
+        try {
+			$connect = mysql_connect($DB_SET['host'],$DB_SET['user'],$DB_SET['pass']);
 			if (!$connect) throw new Exception("Database connect error"); 
 			return $connect;
 		} catch (Exception $e) {
@@ -15,8 +16,10 @@
 		if (!$db){
 			mysql_close($connect);
 		    die('データベース選択失敗です。'.mysql_error());
-		}
+        }
+        mysql_query('SET NAMES utf8', $connect );
 		$result = mysql_query("select * from name");
+
 		if (!$result) {
 			die('クエリーが失敗しました。'.mysql_error());
 		}

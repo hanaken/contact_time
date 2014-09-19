@@ -87,7 +87,11 @@
 					?>
 					<tr class="error">
 						<td><?php echo $rank ?></td>
+                        <?php if(isset($NAME_DEFAULT[$key])){ ?>
 						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $ids[$key] ?>"><?php echo $NAME_DEFAULT[$key] ?></a></td>
+                        <?php } else { ?>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $ids[$key] ?>"><?php echo $key ?></a></td>
+                        <?php } ?>
 						<td><?php echo $time_sum_h.'時間'.$time_sum_m.'分'.$time_sum_s.'秒' ?></td>
 						<td><?php echo $end[$key] ?> まで </td>
 						<td><a class="btn" href="./contact.php?name_id=<?php echo $ids[$key]?>"><i class="icon-off"></i> 開始</a></td>
@@ -97,7 +101,11 @@
 					?>
 					<tr class="success">
 						<td><?php echo $rank ?>
-						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $ids[$key] ?>"><?php echo $NAME_DEFAULT[$key] ?>
+                        <?php if(isset($NAME_DEFAULT[$key])){ ?>
+						<td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $ids[$key] ?>"><?php echo $NAME_DEFAULT[$key] ?></a></td>
+                        <?php } else { ?>
+                        <td><i class="icon-user"></i><a href="./record.php?name_id=<?php echo $ids[$key] ?>"><?php echo $key ?></a></td>
+                        <?php } ?>
 						<td><?php echo $time_sum_h.'時'.$time_sum_m.'分'.$time_sum_s.'秒' ?>
 						<td><?php echo $start[$key]?> から </td>
 						<td><a class="btn btn-danger" href="./contact.php?id=<?php echo $flag[$key] ?>"><i class="icon-ok icon-white"></i> 終了</a></td>

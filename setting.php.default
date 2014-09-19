@@ -1,0 +1,7 @@
+<?php
+$_DB_SET = Array(
+        'host' => '',
+        'user' => '',
+        'pass' => '',
+)
+?>
