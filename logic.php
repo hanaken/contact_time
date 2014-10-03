@@ -67,6 +67,8 @@
 	function checkout($id){
 		$now = date('Y-m-d H:i:s');
 		$now_day = date('d',strtotime($now));
+		$now_month = date('m',strtotime($now));
+		$now_year = date('Y',strtotime($now));
 		$connect = connectDB();
 		$db = mysql_select_db('contacttime' , $connect);
 		if (!$db){
@@ -82,9 +84,11 @@
 			$result = mysql_query("select * from time where id = ".$id);
 			$row = mysql_fetch_assoc($result);
 			$start = date('d', strtotime($row["start"]));
-			if ($now_day > $start){
-				$now = date('Y-m',strtotime($now));
-				$now = $now.'-'.$start.' 23:59:59';
+			$start_month = date('m', strtotime($row["start"]));
+			$start_year = date('Y', strtotime($row["start"]));
+			if (($now_day > $start)||($now_month > $start_month)||($now_year > $start_year)){
+				$now = $start_year.'-'.$start_month.'-'.$start.' 23:59:59';
+				var_dump($now);
 			}
 			$result = mysql_query("update time set end = '".$now."' where id = ".$id);
 			if (!$result) {
